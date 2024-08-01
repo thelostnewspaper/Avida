@@ -28,12 +28,25 @@ We welcome contributions from developers, designers, and accessibility experts w
 
 =========NAVIGATION==========
 Services.html--> HTML for the services page
+
 about.html--> HTML for the about page
+
 howtodo.html--> HTML for the how it works page
+
 index11.html--> HTML for the home page
+
 login.html--> HTML for the login page
+
 loginstyle.css--> CSS for the login page
+
 product.html--> HTML for the products page
+
 pstyle.css--> css for the products page
+
 script.js--> javascript for login
+
 style.css--> css for home and other pages
+
+gale-gabow.py--> python code for gabow algorithm
+
+gale-shapely.py--> python code for gale shapely algorithm
