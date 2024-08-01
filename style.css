@@ -1,0 +1,417 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white; /* Set background color to black */
+    color: #794baa; /* Set default text color to white */
+}
+
+a {
+    color: #872d86; /* Set default link color to white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #DBD2FF; /* Neon blue color on hover */
+}
+
+h3 {
+    color: #e3d5e9; /* Silver grey color for h3 headers */
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+}
+.logo-container {
+    position: absolute;
+    top: 9px;
+    right: 35px;
+    padding: 150;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust logo size as needed */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #C6C2E9; /* Semi-transparent black navbar background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #DBD2FF; /* Neon blue background color on hover */
+    color: black; /* Black text color on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 500px; /* Adjust hero section height as needed */
+    background-color:white;
+    ; /* Semi-transparent black background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.hero-container {
+    position: relative;
+    height: 550px; /* Adjust height as needed */
+    background-image: url(images/p_9bb492cc-4e93-11ef-ba85-2211d6078171_wm.png); /* Replace with your hero image or video */
+    background-size: cover;
+    background-position: center;}
+
+.hero:hover {
+    background-color: #D6D3EF    /* Darker semi-transparent black background on hover */
+}
+
+.hero-content {
+    position: absolute;
+    top: 54.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #422f6c;
+}
+
+.hero-content h1 {
+   font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #f3f2f4;
+    color: #872d86;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Features Section Styles */
+.features {
+    padding: 50px 0;
+}
+.features h1{
+    text-align: center;
+}
+.features h2{
+    text-align: center;
+}
+
+.features .feature {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.features .feature:hover {
+    background-color: #13031a; /* Semi-transparent white background on hover */
+}
+
+.features .feature h3 {
+    margin-bottom: 10px;
+}
+
+.features .feature p {
+    margin-bottom: 20px;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+    padding: 50px 0;
+}
+
+.how-it-works h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #422f6c ;}
+.how-it-works .step {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.how-it-works .step:hover {
+    transform: translateY(-10px); /* Move the step up slightly on hover */
+}
+
+.how-it-works .step-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Meet the Team Section Styles */
+.team {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.team h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #d2cdcd; /* Adjust text color */
+}
+
+.team p {
+    color: #adadad; /* Adjust text color */
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-col {
+    position: relative; /* Required for absolute positioning */
+    flex-basis: calc(25% - 20px); /* Adjust card width based on the number of cards */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.team-col img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-col:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333; /* Adjust text color */
+}
+
+@media (max-width: 768px) {
+    .team-col {
+        flex-basis: calc(50% - 20px); /* Adjust card width for smaller screens */
+    }
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 50px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+}
+.testimonials h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: #422f6c; }
+
+.testimonials .testimonial {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.testimonials .testimonial:hover {
+    transform: translateY(-10px); /* Move the testimonial up slightly on hover */
+}
+
+.testimonials .testimonial-content {
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px 0;
+    background-color: #ffffff    ; /* Semi-transparent black background */ 
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+    color: #C3B5FF ;
+    
+}
+.about-content h3{
+    color: #C3B5FF ;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 50px;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    color: rgb(37, 4, 4);
+}
+
+.contact form input[type="text"]:focus,
+.contact form input[type="email"]:focus,
+.contact form textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background on focus */
+}
+
+.contact form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #C7B9FF;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact form button[type="submit"]:hover {
+    background-color: black;
+    color: white;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.social-media-icons {
+    margin-top: 20px;
+}
+
+.social-media-icons .social-icon {
+    margin-right: 10px;
+}
+
+.social-media-icons .social-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons .social-icon:hover img {
+    transform: scale(1.2); /* Scale up social media icons on hover */
+}
+
+/* Footer Section Styles */
+footer {
+    background-color: #C7B9FF; /* Neon blue color for footer background */
+    color: black; /* Black text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .navbar li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+    }
+
+    .features .feature,
+    .how-it-works .step,
+    .meet-the-team .team-member {
+        width: 100%;
+    }
+
+    .contact form input[type="text"],
+    .contact form input[type="email"],
+    .contact form textarea {
+        width: calc(100% - 20px);
+    }
+}
