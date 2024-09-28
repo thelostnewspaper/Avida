@@ -1,3 +1,6 @@
+import pandas as pd
+from hybrid_factorization import HybridFactorization
+
 def calculate_language_scores(scribe_profiles, disabled_person_profiles):
     language_scores = {}
     for scribe, profile in scribe_profiles.items():
@@ -59,40 +62,4 @@ def calculate_scribe_skills_scores(scribe_profiles, disabled_person_profiles):
     return scribe_skills_scores
 
 def calculate_personal_preferences_scores(scribe_profiles, disabled_person_profiles):
-    personal_preferences_scores = {}
-    for scribe, profile in scribe_profiles.items():
-        for disabled_person, disabled_profile in disabled_person_profiles.items():
-            personal_preferences_score = 0
-            if profile['personality'] == disabled_profile['personality']:
-                personal_preferences_score = 1
-            elif profile['personality'] in disabled_profile['personality_preferences']:
-                personal_preferences_score = 0.5
-            personal_preferences_scores[(scribe, disabled_person)] = personal_preferences_score
-    return personal_preferences_scores
-
-def combine_scores(language_scores, availability_scores, location_scores, disability_type_scores, scribe_skills_scores, personal_preferences_scores):
-    combined_scores = {}
-    for scribe, disabled_person in language_scores.keys():
-        combined_score = (language_scores[(scribe, disabled_person)] + availability_scores[(scribe, disabled_person)] + location_scores[(scribe, disabled_person)] + disability_type_scores[(scribe, disabled_person)] + scribe_skills_scores[(scribe, disabled_person)] + personal_preferences_scores[(scribe, disabled_person)]) / 6
-        combined_scores[(scribe, disabled_person)] = combined_score
-    return combined_scores
-
-def rank_matches(combined_scores):
-    ranked_matches = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
-    return ranked_matches
-
-def gale_shapley(matching, preferences, free_scribes, free_disabled):
-    while free_scribes:
-        scribe = free_scribes.pop(0)
-        for disabled in preferences[scribe]:
-            if disabled in free_disabled:
-                matching[scribe] = disabled
-                free_disabled.remove(disabled)
-                break
-            else:
-                current_scribe = matching[disabled]
-                if preferences[disabled].index(scribe) < preferences[disabled].index(current_scribe):
-                    matching[disabled] = scribe
-                    free_scribes.append(current_scribe)
-                    break
-    return matching
+    personal
