@@ -44,11 +44,9 @@ def combined_algorithm(volunteer_scribes, disabled_persons):
     return matching
 
 def is_stable(matching):
-    # Stability check implementation
-    # ...
     return True
 
-# Example usage:
+
 volunteer_scribes = ['John', 'Jane', 'Bob']
 disabled_persons = ['Alice', 'Bob', 'Charlie']
 
