@@ -48,6 +48,3 @@ script.js--> javascript for login
 
 style.css--> css for home and other pages
 
-gale-gabow.py--> python code for gabow algorithm
-
-gale-shapely.py--> python code for gale shapely algorithm
